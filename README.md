@@ -1,4 +1,4 @@
-# Konwerter artykułów do HTML za pomocą OpenAI GPT-4
+# Konwerter artykułów do HTML za pomocą OpenAI GPT-4 🇵🇱
 
 Ten projekt automatyzuje proces konwersji tekstowych artykułów na dobrze sformatowany HTML z wykorzystaniem API GPT-4 od OpenAI. Skrypt odczytuje artykuł, formatuje go zgodnie z określonymi zasadami i integruje zawartość z szablonem HTML.
 
@@ -90,7 +90,7 @@ Wyniki zostaną zapisane w katalogu output:
 ## Obsługa błędów
 W przypadku błędów podczas odczytu plików, komunikacji z API OpenAI lub zapisu plików, szczegóły zostaną zapisane w konsoli.
 
-# Article to HTML Converter using OpenAI GPT-4
+# Article to HTML Converter using OpenAI GPT-4 🇬🇧
 
 This project automates the process of converting textual articles into well-formatted HTML using the GPT-4 API from OpenAI. The script reads the article, formats it according to specified guidelines, and integrates the content into an HTML template.
 
