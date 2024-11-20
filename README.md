@@ -61,12 +61,12 @@ Ten projekt automatyzuje proces konwersji tekstowych artykułów na dobrze sform
    **MacOs i Linux**:
    W terminalu wykonaj:
      ```bash
-     #Stałe ustawienie:
+     #Stałe ustawienie zmiennej środowiskowej:
      echo 'export OPENAI_API_KEY="your_api_key_here"' >> ~/.bashrc
      # Dla Zsh:
      echo 'export OPENAI_API_KEY="your_api_key_here"' >> ~/.zshrc
 
-     #Tymczasowe ustawienie:
+     #Tymczasowe ustawienie zmiennej środowiskowej:
      export OPENAI_API_KEY="your_api_key_here"
      ```
 ---
