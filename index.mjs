@@ -1,11 +1,14 @@
 import OpenAI from "openai";
 import fs from "fs/promises";
 import { preparePrompt, saveHTML } from "./utils.js";
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 async function main() {
   try {
     const article = await fs.readFile("./resources/artykul.txt", "utf-8");
+    const template = await fs.readFile("./resources/szablon.html", "utf-8");
     const prompt = preparePrompt(article);
     const completion = await openai.chat.completions.create({
       model: "gpt-4",
@@ -14,8 +17,10 @@ async function main() {
         { role: "user", content: prompt },
       ],
     });
-    const html = completion.choices[0].message.content;
-    await saveHTML("./output/artykul.html", html);
+    const articleHTML = completion.choices[0].message.content;
+    await saveHTML("./output/artykul.html", articleHTML);
+    const fullHTML = template.replace("<!-- {{content}} -->", articleHTML);
+    await saveHTML("./output/podglad.html", fullHTML);
     console.log("HTML content successfully generated and saved.");
   } catch (error) {
     console.error("Error generating HTML:", error);
