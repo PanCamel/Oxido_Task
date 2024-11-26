@@ -107,14 +107,14 @@ This project automates the process of converting textual articles into well-form
 
 ## Project Structure
 ```
-├── index.mjs          # Głowny skrypt do generowania HTML
-├── utils.js           # Funkcje pomocnicze, do analizowania artykułu i zapisu plików
+├── index.mjs          # Main script for generating HTML
+├── utils.js           # Utlity functions
 ├── resources/
-│   ├── artykul.txt    # Input (artykuł do przekonwertowania)
-│   ├── szablon.html   # Szablon gotowego podglądu
+│   ├── artykul.txt    # Input (article to be converted)
+│   ├── szablon.html   # template for the finished article
 ├── output/
-│   ├── artykul.html   # Wygenerowany artykuł
-│   ├── podglad.html   # Finalny podgląd artykułu
+│   ├── artykul.html   # Generated article
+│   ├── podglad.html   # Final preview of the converted article
 ```
 
 ---
